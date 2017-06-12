@@ -1,0 +1,29 @@
+{
+  "name": "reg-e",
+  "version": "1.0.0",
+  "description": "A platform for event organizer to plan and promote their events.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WillyWunderdog/Reg-E.git"
+  },
+  "keywords": [
+    "\"events\"",
+    "\"planning\""
+  ],
+  "author": "Gbenga Ode",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WillyWunderdog/Reg-E/issues"
+  },
+  "homepage": "https://github.com/WillyWunderdog/Reg-E#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "firebase": "^4.1.2",
+    "nodemon": "^1.11.0"
+  }
+}
