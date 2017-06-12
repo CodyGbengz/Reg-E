@@ -1,5 +1,7 @@
 const express = require('express'),
-router = express.Router();
+router = express.Router(),
+auth = require('../controllers/auth.js');
+
 
 //get homepage route
 router.get('/', (req,res,next) => {
@@ -7,6 +9,9 @@ router.get('/', (req,res,next) => {
     res.send('index');
     (next);
 });
+
+router.get('/dashboard', auth.signIn);
+router.post('/dashboard', auth.signUp);
 
 //set up error handlers
 router.use((err,req,res,next) => {
