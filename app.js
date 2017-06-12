@@ -2,7 +2,8 @@ const express = require('express'),
 bodyParser = require('body-parser'),
 path = require('path'),
 favicon = require('serve-favicon'),
-firebase = require('firebase');
+firebase = require('firebase')
+routes = require('./routes/routes.js');
 
 const port = process.env.PORT || 8080;
 
@@ -19,9 +20,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded( {extended: false}));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', (req,res) =>{
-    res.send('hello bitches');
-})
+app.use('/', routes);
+
 app.listen(port, () => {
     console.log('Action live on ' + port);
 });
