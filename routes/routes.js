@@ -1,12 +1,14 @@
 const express = require('express'),
 router = express.Router(),
 auth = require('../controllers/auth.js');
+//index = require('../public/javascripts/index.js');
 
 
 //get homepage route
 router.get('/', (req,res,next) => {
     console.log('index route');
-    res.send('index');
+   // console.log(index.testImport);
+    res.render('pages/login');
     (next);
 });
 

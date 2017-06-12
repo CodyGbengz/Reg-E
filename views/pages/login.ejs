@@ -1,0 +1,24 @@
+<% include ../partials/head %>
+  <body id="form_layout">
+    <script>
+   window.fbAsyncInit = function() {
+      FB.init({
+         appId      : 141713656375126,
+         xfbml      : true,
+         version    : 'v2.6'
+      });
+   };
+
+   (function(d, s, id){
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+	
+</script>
+<button class="btn" id="googleIn">google sign in</button>
+<button class="btn" id="facebooIn">facebook sign in</button>
+<% include ../partials/footer %>
+  </body>
