@@ -9,11 +9,14 @@ router.get('/', (req,res,next) => {
     console.log('index route');
    // console.log(index.testImport);
     res.render('pages/login');
-    (next);
+    
 });
 
-router.get('/dashboard', auth.signIn);
-router.post('/dashboard', auth.signUp);
+router.get('/dashboard', (req,res,next) =>{
+    res.render('pages/dashboard');
+    
+});
+//router.post('/dashboard', auth.signUp);
 
 //set up error handlers
 router.use((err,req,res,next) => {
