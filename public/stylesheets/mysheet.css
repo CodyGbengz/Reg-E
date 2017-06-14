@@ -1,0 +1,44 @@
+#login_layout{
+    background-image: url('../images/eventbg1.jpg');
+    background-size: 100%;
+}
+
+.footer{
+    opacity: 0.8;
+    height: 30px;
+    color: white;
+    background-color: black;
+}
+
+.signIn-card{
+    margin-top: 100px;
+    padding: 10px;
+    color: white;
+    background-color: black;
+    opacity: 0.7;
+    border-radius: 10px;
+}
+
+.login-btn{
+    margin-bottom:5px;
+    border: 2px solid black;
+    color: black;
+}
+
+.front{
+    background-image: url('../images/eventbg3.jpg');
+    background-size:auto auto;
+    height:500px;
+    
+}
+
+.event-card{
+
+    line-height: 1em;
+    padding:10px;
+    margin:10px 45px 10px 45px;
+       -webkit-box-shadow:2px 2px 2px 2px rgba(0,0,0,0.3);
+       -moz-box-shadow:2px 2px 2px 2px  rgba(0,0,0,0.3);
+       -o-box-shadow:2px 2px 2px 2px rgba(0,0,0,0.3);
+       box-shadow:2px 2px 2px 2px  rgba(0,0,0,0.3);
+}

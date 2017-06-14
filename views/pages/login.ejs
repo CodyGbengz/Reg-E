@@ -1,5 +1,5 @@
 <% include ../partials/head %>
-  <body id="form_layout">
+  <body id="login_layout">
     <script>
    window.fbAsyncInit = function() {
       FB.init({
@@ -18,7 +18,15 @@
    }(document, 'script', 'facebook-jssdk'));
 	
 </script>
-<button class="btn" id="googleIn">google sign in</button>
-<button class="btn" id="facebookIn">facebook sign in</button>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4 text-center signIn-card">
+      <h2><b>Reg-E</b></h2>
+      <p> login via social to get started</p>
+      <button class="login-btn btn " id="googleIn"><i class="fa fa-google"></i> <b>google sign in</b></button><br/>
+      <button class="login-btn btn " id="facebookIn"><i class="fa fa-facebook-official"></i> <b>facebook sign in</b></button><br/>
+    </div>
+  </div>
+</div>
 <% include ../partials/footer %>
   </body>

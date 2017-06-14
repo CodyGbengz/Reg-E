@@ -24,13 +24,15 @@ firebase.initializeApp(config);
 function googleIn(){
     console.log('google login clicked');
     let provider = new firebase.auth.GoogleAuthProvider();
+   
     firebase.auth().signInWithPopup(provider)
     .then((result) => {
         let token = result.credential.accessToken,
         user = result.user,
-        userDbEntry = {}
+        userDbEntry = {username: user.displayName,
+        email: user.email};
+        
         firebase.database().ref().child('users').push().set(userDbEntry);
-
         window.location = '/dashboard';
     })
     .catch((error) => {
@@ -41,13 +43,15 @@ function googleIn(){
 function facebookIn(){
     console.log('facebook login clicked');
     let provider = new firebase.auth.FacebookAuthProvider();
+   
     firebase.auth().signInWithPopup(provider)
     .then((result) => {
         let token = result.credential.accessToken,
         user = result.user,
-        userDbEntry = {}
+        userDbEntry = {username: user.displayName,
+        email: user.email};
+   
         firebase.database().ref().child('users').push().set(userDbEntry);
-
         window.location = '/dashboard';
     })
     .catch((error) => {

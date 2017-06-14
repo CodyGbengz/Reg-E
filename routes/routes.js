@@ -16,6 +16,10 @@ router.get('/dashboard', (req,res,next) =>{
     res.render('pages/dashboard');
     
 });
+
+router.get('/create', (req,res,next) => {
+    res.render('pages/create');
+})
 //router.post('/dashboard', auth.signUp);
 
 //set up error handlers
